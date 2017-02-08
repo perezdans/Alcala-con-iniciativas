@@ -10,9 +10,9 @@ window.onload = function() {
 //Detecta si en la url se indica la ciudad a visualizar
 
 var ciudad;
-var centro = new L.LatLng(40.41075,-3.69366);
+var centro = new L.LatLng(40.482272, -3.361485);
 var cadVariables = location.search.substring(1,location.search.length);
-var cityquery="Madrid";
+var cityquery = "Alcalá de Henares";
 
 if (cadVariables.length>0){
   var arrVariables = cadVariables.split("&");
@@ -24,7 +24,7 @@ if (cadVariables.length>0){
 
         else{
           eval(arrVariableActual[0]+"="+arrVariableActual[1]+";");
-        }      
+        }
     }
 
     ciudad = city;
@@ -36,14 +36,18 @@ if (cadVariables.length>0){
         centro = new L.LatLng(40.41075,-3.69366);
         cityquery = "Madrid";
     };
+    if(ciudad=="AdH"){
+        centro = new L.LatLng(40.482272, -3.361485);
+        cityquery = "Alcalá de Henares";
+    };
     if(ciudad=="Quito"){
-        centro = new L.LatLng(-0.2108, -78.4747); 
+        centro = new L.LatLng(-0.2108, -78.4747);
         cityquery = "Quito";
     };
     $('.hd-menu-mas').find('a').remove();
     $('.hd-menu-mas').append('<a class="hd-main" href="./formulario/?city=' + ciudad +'">Añadir</a>' );
     $('.hd-menu-act').find('a').remove();
-    $('.hd-menu-act').append('<a class="hd-main-r" href="../actividades/?city=' + ciudad +'">Actividades</a>' ); 
+    $('.hd-menu-act').append('<a class="hd-main-r" href="../actividades/?city=' + ciudad +'">Actividades</a>' );
 }
 
 var ui = {
@@ -116,12 +120,12 @@ var ui = {
             if ($elm.hasClass('active')) {
                 $elm.parents('.hd-menu-place')
                   .find('.active').removeClass('active').end()
-                  .find('.hd-main').removeClass('active');                
+                  .find('.hd-main').removeClass('active');
             } else {
                 $elm.parents('.hd-menu-place')
                   .find('.active').removeClass('active').end()
                   .find('.hd-main').addClass('active');
-                $elm.addClass('active');                
+                $elm.addClass('active');
             }
 
             //alert(city[1]);
@@ -182,10 +186,10 @@ var data = {
                 //list alphabetically
                 $(".hd-menu-3 li").sort(asc_sort).appendTo('.hd-menu-3');
                 $(".hd-menu-4 li").sort(asc_sort).appendTo('.hd-menu-4');
-                $(".hd-menu-5 li").sort(asc_sort).appendTo('.hd-menu-5');                
+                $(".hd-menu-5 li").sort(asc_sort).appendTo('.hd-menu-5');
                 // accending sort
                 function asc_sort(a, b){
-                    return ($(b).text()) < ($(a).text()) ? 1 : -1;    
+                    return ($(b).text()) < ($(a).text()) ? 1 : -1;
                 }
             })
             .error(function(errors) {
@@ -194,12 +198,12 @@ var data = {
             });
 
     },
-    activateAgent: function(age) {     
+    activateAgent: function(age) {
       data.data.filters.age = age;
       data.processFilters();
       console.log('Agente activo: ' + data.data.filters.age);
     },
-    activateCategory: function(cat) {     
+    activateCategory: function(cat) {
       data.data.filters.cat = cat;
       data.processFilters();
       console.log('Categoría activa: ' + data.data.filters.cat);
@@ -213,7 +217,7 @@ var data = {
 
       for (var i = data.data.markers.length - 1; i >= 0; i--) {
         var marker = data.data.markers[i];
-        var markerData = marker.options.data; 
+        var markerData = marker.options.data;
         // comprueba agente
         if(data.data.filters.age && markerData.agente != data.data.filters.age) {
           $(marker._icon).addClass('disabled');
@@ -265,7 +269,7 @@ var data = {
             data.closePops();
             timeout = 600;
         }
-        data.data.popTimeout = setTimeout(function() {            
+        data.data.popTimeout = setTimeout(function() {
             //var address = popdata.place + ": " + popdata.tipovia + " " + popdata.nomvia + "," + popdata.portal;
             var address = popdata.address;
             var web;
@@ -281,8 +285,8 @@ var data = {
             if (popdata.ini_twitter!==null && popdata.ini_twitter!==''){datoscontacto+='</br><i class="fa fa-twitter"></i> <a href="https://twitter.com/' + twuser +'" target="_blank" > ' + popdata.ini_twitter +'</a>';}
             if (popdata.ini_facebook!==null && popdata.ini_facebook!==''){datoscontacto+='</br><i class="fa fa-facebook"></i> <a href="'+ popdata.ini_facebook +'" target="_blank" > ' + popdata.ini_facebook +'</a>';}
 
-            pop.find('h2').html(popdata.title);        
-            pop.find('.ini-address').html(address);       
+            pop.find('h2').html(popdata.title);
+            pop.find('.ini-address').html(address);
             pop.find('h3').html('<p><i class="fa fa-tag"></i>  '+ popdata.tematica + '</br><i class="fa fa-umbrella"></i>  ' + popdata.espacio + '</br><i class="fa fa-users"></i>  ' + popdata.agente + "</p>").removeClass().addClass($(mk._icon).find('div').attr('class'));
             //pop.find('.ini-categ').html(popdata.tematica + "</br>" + popdata.espacio + "</br>" + popdata.agente);
             pop.find('.ini-desc').html(popdata.descr);
@@ -330,6 +334,7 @@ var data = {
 var mex = [19.434997, -99.132633];
 var qui =[-0.2108, -78.4747]
 var mad = [40.41, -3.7];
+var adh = [40.482272, -3.361485];
 
 var map = {
     init: function() {
@@ -366,6 +371,10 @@ var map = {
             city = mad;
             scp = 12;
             cityquery = "Madrid";
+        } else if (ciudad == 'AdH') {
+            city = adh;
+            scp = 12;
+            cityquery = "Alcalá de Henares";
         } else {
             return false;
         }
@@ -373,8 +382,8 @@ var map = {
         $('.hd-menu-mas').find('a').remove();
         $('.hd-menu-mas').append('<a class="hd-main" href="./formulario/?city=' + ciudad +'">Añadir</a>' );
         $('.hd-menu-act').find('a').remove();
-        $('.hd-menu-act').append('<a class="hd-main-r" href="../actividades/?city=' + ciudad +'">Actividades</a>' ); 
-        
+        $('.hd-menu-act').append('<a class="hd-main-r" href="../actividades/?city=' + ciudad +'">Actividades</a>' );
+
         this.data.map.setView(city, scp);
         mapa.init();
 
@@ -415,13 +424,13 @@ var map = {
             }
         }
         if (options) {
-            
+
             if (options.agent) {
                 query += 'where agente = "' + options.agent + '"';
             }
         }
         return query;
-    },    
+    },
     getCategory: function(evtType) {
         //select * from actividades_ics where act_type = 'taller'
         map.data.cartoLayer.getSubLayer(0).setSQL(map.queryer({
