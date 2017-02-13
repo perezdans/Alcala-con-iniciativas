@@ -274,16 +274,18 @@ var data = {
             var address = popdata.address;
             var web;
             var facebook;
-            var twuser = popdata.ini_twitter.slice(1);
             var datoscontacto='';
             if (popdata.ini_tef!==null && popdata.ini_tef!==''){datoscontacto += '<i class="fa fa-phone"></i> '+ popdata.ini_tef + '</br>'}
 
-            if (popdata.ini_mail!==null && popdata.ini_mail!==''){datoscontacto+= '<i class="fa fa-envelope"></i> ' + popdata.ini_mail}
+            if (popdata.ini_mail!==null && popdata.ini_mail!==''){datoscontacto += '<i class="fa fa-envelope"></i> ' + popdata.ini_mail}
             if (popdata.ini_web!==null && popdata.ini_web!=='' && popdata.ini_web!==' '){
                     datoscontacto +='</br><i class="fa fa-globe"></i> <a href="'+ popdata.ini_web +'" target="_blank" > ' + popdata.ini_web + '</a>';
                 }
-            if (popdata.ini_twitter!==null && popdata.ini_twitter!==''){datoscontacto+='</br><i class="fa fa-twitter"></i> <a href="https://twitter.com/' + twuser +'" target="_blank" > ' + popdata.ini_twitter +'</a>';}
-            if (popdata.ini_facebook!==null && popdata.ini_facebook!==''){datoscontacto+='</br><i class="fa fa-facebook"></i> <a href="'+ popdata.ini_facebook +'" target="_blank" > ' + popdata.ini_facebook +'</a>';}
+            if (popdata.ini_twitter!==null && popdata.ini_twitter!==''){
+                var twuser = popdata.ini_twitter.slice(1);
+                datoscontacto +='</br><i class="fa fa-twitter"></i> <a href="https://twitter.com/' + twuser +'" target="_blank" > ' + popdata.ini_twitter +'</a>';
+            }
+            if (popdata.ini_facebook!==null && popdata.ini_facebook!==''){datoscontacto +='</br><i class="fa fa-facebook"></i> <a href="'+ popdata.ini_facebook +'" target="_blank" > ' + popdata.ini_facebook +'</a>';}
 
             pop.find('h2').html(popdata.title);
             pop.find('.ini-address').html(address);
