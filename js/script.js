@@ -1,4 +1,4 @@
-/*CIVICS alpha v3*/
+﻿/*CIVICS alpha v3*/
 /*Mapa de Iniciativas*/
 
 window.onload = function() {
@@ -176,7 +176,7 @@ var data = {
                     }
                     if (response.rows[i].tematica && data.data.temas.indexOf(response.rows[i].tematica) == -1) {
                         data.data.temas.push(response.rows[i].tematica);
-                        $menuTema.append('<li><a href="#" class="ic--' + response.rows[i].tematica + '" data-tema="' + response.rows[i].tematica + '">' + response.rows[i].tematica + '</a></li>');
+                        $menuTema.append('<li><a href="#" class="ic--' + limpiarNombre(response.rows[i].tematica) + '" data-tema="' + response.rows[i].tematica + '">' + response.rows[i].tematica + '</a></li>');
                     }
                     if (response.rows[i].agente && data.data.agents.indexOf(response.rows[i].agente) == -1) {
                         data.data.agents.push(response.rows[i].agente);
@@ -247,7 +247,7 @@ var data = {
 
         var icon = L.divIcon({
             iconSize: [40, 40],
-             html: '<div class="mk ic--' + point.tematica + ' ic--' + point.espacio + '">'
+             html: '<div class="mk ic--' + limpiarNombre(point.tematica) + ' ic--' + point.espacio + '">'
         });
     var mark = L.marker([point.lat, point.lon],{ icon: icon, data: point, title: point.title })
       //.addTo(map.data.map)
@@ -702,4 +702,25 @@ Note: The Leaflet maps API must be included *before* this code
         }())
     }).call(this);
 }).call(this);
-/* Mon 14 Oct 2013 10:54:59 BST */
+
+
+function limpiarNombre(str) {
+    /* Remove unwanted characters, only accept alphanumeric and space */
+    var acentos = "ÃÀÁÄÂÈÉËÊÌÍÏÎÒÓÖÔÙÚÜÛãàáäâèéëêìíïîòóöôùúüûÑñÇç";
+    var original = "AAAAAEEEEIIIIOOOOUUUUaaaaaeeeeiiiioooouuuunncc";
+    for (var i=0; i<acentos.length; i++) {
+        str = str.replace(acentos.charAt(i), original.charAt(i));
+    }
+
+    var keyword = str.replace(/[^A-Za-z0-9 ]/g,'');
+
+    /* Replace multi spaces with a single space */
+    keyword = keyword.replace(/\s{2,}/g,' ');
+
+    /* Replace space with a '-' symbol */
+    keyword = keyword.replace(/\s/g, "-");
+
+    return keyword.toLowerCase();
+}
+
+

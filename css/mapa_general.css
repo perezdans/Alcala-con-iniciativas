@@ -2,9 +2,9 @@
 
 font-family: 'FontAwesome';
   src: url('http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.eot');
-  src: url('http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.eot?#iefix&v=3.2.0') format('embedded-opentype'), 
-       url('http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.woff') format('woff'), 
-       url('http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.ttf') format('truetype'), 
+  src: url('http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.eot?#iefix&v=3.2.0') format('embedded-opentype'),
+       url('http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.woff') format('woff'),
+       url('http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.ttf') format('truetype'),
        url('http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.svg') format('svg');
   font-weight: normal;
   font-style: normal;
@@ -61,29 +61,29 @@ html[xmlns] .clearfix { display: block; }
   body.sidebarAct { padding-left: 300px; box-sizing: border-box; }
 
   #main { padding-top: 50px; padding-bottom: 35px; box-sizing: border-box; }
-   
+
 @media (max-width: 1120px) {
   #hd-menu .hd-menu-elm { width: 65px; }
   .hd-main { text-indent: -9999px; overflow: hidden; width: 65px; }
     .hd-main::before { text-indent: 0; }
 }
 
-/*Iconos temática*/ 
+/*Iconos temática*/
 
-.ic--Arte:before { content:'\f1fc'; }
+.ic--arte-y-cultura:before { content:'\f1fc'; }
 .ic--Ciencia:before { content:'\f1fa'; }
-.ic--Apoyo:before { content:'\f004'; }
-.ic--Cultura:before { content:'\f02d'; }
+.ic--atencion-y-cuidados:before { content:'\f004'; }
+.ic--ocio:before { content:'\f02d'; }
 .ic--Economía:before { content:'\f0d6'; }
-.ic--Educación:before { content:'\f19d'; }
-.ic--Deporte:before { content:'\f1e3'; }
-.ic--Derechos:before { content:'\f225'; }
+.ic--educacion:before { content:'\f19d'; }
+.ic--deportes:before { content:'\f1e3'; }
+.ic--igualdad-y-derechos:before { content:'\f225'; }
 .ic--Política:before { content:'\f19c'; }
-.ic--Mediación:before { content:'\f085'; }
+.ic--integracion-social:before { content:'\f085'; }
 .ic--Producción:before { content:'\f085'; }
 .ic--Urbanismo:before { content:'\f015'; }
-.ic--Movilidad:before { content:'\f206'; }
-.ic--Ecología:before { font-size: 1.2em; content:'\f06c'; }
+.ic--salud-mental:before { content:'\f206'; }
+.ic--medio-ambiente-y-ecologia:before { font-size: 1.2em; content:'\f06c'; }
 .ic--Espacio:before { content:'\f1b3'; }
 .ic--Otra:before { content:'\f069'; }
 
@@ -114,7 +114,7 @@ html[xmlns] .clearfix { display: block; }
           background-color: #000;
           box-shadow: 1px 3px rgba(0,0,0,0.1); }
     .leaflet-marker-icon:hover .mk { z-index: 123213213!important; -webkit-transform-origin: 50% 50%; -webkit-transform: scale(1.2); }
-    .leaflet-marker-icon .mk:before { display: block; height: 30px; width: 30px; color: white; font-family: 'FontAwesome'; 
+    .leaflet-marker-icon .mk:before { display: block; height: 30px; width: 30px; color: white; font-family: 'FontAwesome';
         text-align: center; font-size: 1.7em; line-height: 1.6em; margin-top: -2px; text-shadow: 2px 2px rgba(0,0,0,0.3); }
   .leaflet-marker-icon.disabled { display: none; }
 
@@ -125,21 +125,21 @@ html[xmlns] .clearfix { display: block; }
     padding-left: 20px; z-index: 2; position: relative; padding: 0; overflow: hidden; text-indent: -999px;
     width: 37px; height: 36px; }
 
-.bl-slide-pnl { color: #000; width: 100%; padding-top: 80px; z-index: 15;  
+.bl-slide-pnl { color: #000; width: 100%; padding-top: 80px; z-index: 15;
       box-sizing: border-box; position: absolute; bottom: -100%;
       background: #FDB4EF; height: 100%; overflow: auto;
       -webkit-transition: all 1s; -moz-transition: all 1s;  -o-transition: all 1s; transition: all 1s;  }
   .bl-slide-pnl .wrapper {font-family: "Montserrat",sans-serif;   margin: 0 auto; max-width: 960px; width: 100%;padding-bottom: 20px;}
     .bl-slide-pnl h2 { font-size: 2em; margin: 0 0 1.2em 0; color: #000; }
     .bl-slide-pnl h3 { font-size: 1.1em; padding: 0.4em;}
-    
+
     .bl-slpnl-info p { text-align: center; font-size: 1em;}
 
     .bl-slpnl-info p.sinsalto {text-align: center; font-size: 1em;margin-bottom: 0;}
-    .bl-slide-pnl .parrafo { margin-bottom: 2em; text-align: center;} 
-    
-    .bl-slide-pnl .logo_civics { text-align: center;  padding: 20px 0px 0px 0px;} 
-    
+    .bl-slide-pnl .parrafo { margin-bottom: 2em; text-align: center;}
+
+    .bl-slide-pnl .logo_civics { text-align: center;  padding: 20px 0px 0px 0px;}
+
     .bl-slide-pnl .iconos_logo {padding-top: 80px; text-align: center; }
     .bl-slide-pnl .icono_logo {display: inline-block; width: 17em;}
     .bl-slide-pnl .icono_logo i {font-size: 4em;  }
@@ -148,15 +148,15 @@ html[xmlns] .clearfix { display: block; }
     .bl-slide-pnl .icono_logo_plus {display: inline-block; font-size: 2.3em;}
 
 
-    .bl-slide-pnl .pie {font-size: 0.8em; font-family: "Montserrat",sans-serif; padding-top: 160px;} 
-      .bl-slide-pnl .pie h3 { font-family: "Montserrat",sans-serif; line-height: 2em} 
+    .bl-slide-pnl .pie {font-size: 0.8em; font-family: "Montserrat",sans-serif; padding-top: 160px;}
+      .bl-slide-pnl .pie h3 { font-family: "Montserrat",sans-serif; line-height: 2em}
 
-      
+
       .bl-slide-pnl .equipo {position: absolute; left: 40px; display: inline-block; max-width: 45%; text-align: left; font-weight: 800;}
-      .bl-slide-pnl .equipo p {text-align: left;} 
-      .bl-slide-pnl .equipo h3 {text-align: left; padding: 0.4em;} 
+      .bl-slide-pnl .equipo p {text-align: left;}
+      .bl-slide-pnl .equipo h3 {text-align: left; padding: 0.4em;}
       .bl-slide-pnl .colaboradores {position: absolute; right: 40px; display: inline-block; text-align: right; padding: 0 0 0 40px; max-width: 50%}
-       
+
   .bl-slide-pnl .closeForm { position: absolute; right: 20px; top: 20px; color: #000; border: 1px solid ;}
 
   .bl-slide-pnl .logosColab {/*position: relative; left: 500px; bottom: 50px;*/}
