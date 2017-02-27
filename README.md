@@ -114,7 +114,7 @@ Biblioteca JavaScript  construida sobre JQuery para la ventana de mapa de geocod
 
 Los datos corresponden a la información facilitada por las iniciativas
 
-## Acceso a los datos
+## Acceso a los datos.
 
 Puedes consultar, descargar o utilizar el API que los proporciona desde el servicio de www.cartodb.com:
 
