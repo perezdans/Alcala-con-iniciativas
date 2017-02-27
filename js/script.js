@@ -172,7 +172,7 @@ var data = {
                     data.drawMarker(response.rows[i]);
                     if (response.rows[i].espacio && data.data.types.indexOf(response.rows[i].espacio) == -1) {
                         data.data.types.push(response.rows[i].espacio);
-                        $menuTypo.append('<li><a href="#" class="ic--' + response.rows[i].espacio + '" data-tipo="' + response.rows[i].espacio + '">' + response.rows[i].espacio + '</a></li>');
+                        $menuTypo.append('<li><a href="#" class="ic--' + limpiarNombre(response.rows[i].espacio) + '" data-tipo="' + response.rows[i].espacio + '">' + response.rows[i].espacio + '</a></li>');
                     }
                     if (response.rows[i].tematica && data.data.temas.indexOf(response.rows[i].tematica) == -1) {
                         data.data.temas.push(response.rows[i].tematica);
@@ -247,7 +247,7 @@ var data = {
 
         var icon = L.divIcon({
             iconSize: [40, 40],
-             html: '<div class="mk ic--' + limpiarNombre(point.tematica) + ' ic--' + point.espacio + '">'
+             html: '<div class="mk ic--' + limpiarNombre(point.tematica) + ' ic--' + limpiarNombre(point.espacio) + '">'
         });
     var mark = L.marker([point.lat, point.lon],{ icon: icon, data: point, title: point.title })
       //.addTo(map.data.map)
@@ -411,7 +411,7 @@ var map = {
     queryer: function(options) {
 
         //var query = "SELECT ini_name as title, lat, lon, ini_addres as address, ini_agent as agente, ini_topic as tematica, ini_space as espacio, cartodb_id, the_geom_webmercator, ini_descri as descr, ini_tef, ini_web, ini_mail, ini_twitter, ini_facebook FROM iniciativas where city like '" + cityquery + "'";
-        var query = "SELECT ini_name as title, lat, lon, ini_addres as address, ini_agent as agente, ini_topic as tematica, ini_space as espacio, cartodb_id, the_geom_webmercator, ini_descri as descr, ini_tef, ini_web, ini_mail, ini_twitte as ini_twitter, ini_facebo as ini_facebook FROM iniciativas_aci_02_2017_n2 where city like '" + cityquery + "'";
+        var query = "SELECT ini_name as title, lat, lon, ini_addres as address, ini_agent as agente, ini_topic as tematica, ini_space as espacio, cartodb_id, the_geom_webmercator, ini_descri as descr, ini_tef, ini_web, ini_mail, ini_twitter, ini_facebook FROM iniciativas_aci_02_2017_n2 where city like '" + cityquery + "'";
                     //+ 'SELECT ini_name as title, lat, lon, ini_addres as address, ini_agent as agente, ini_topic as tematica, ini_space as espacio, cartodb_id, the_geom_webmercator, ini_descri as descr, ini_tef, ini_web, ini_mail, ini_twitter, ini_facebook FROM iniciativas_df';
         // var query = 'SELECT espacio_table.act_name as title, espacio_table.ini_id, espacio_table.act_topic as tematica, espacio_table.cartodb_id, espacio_table.act_descri as descr, espacio_table.act_inicio as inicio, espacio_table.act_final as final, espacio_table.ini_web, place_form_table.pla_name as place, place_form_table.pla_tipovia as tipovia, place_form_table.pla_nomvia as nomvia, place_form_table.pla_numportal as portal, place_form_table.map_long as lon, place_form_table.map_lat as lat FROM espacio_table, place_form_table WHERE espacio_table.pla_id = place_form_table.pla_id';
         if (options) {
@@ -450,7 +450,7 @@ var map = {
             sublayers: [{
                 //sql: 'SELECT ini_name as title, lat, lon, ini_addres as address, ini_agent as agente, ini_topic as tematica, ini_space as espacio, cartodb_id, the_geom_webmercator, ini_descri as descr, ini_tef, ini_web, ini_mail, ini_twitter, ini_facebook FROM iniciativas_fram;'
                 //sql: "SELECT ini_name as title, lat, lon, ini_addres as address, ini_agent as agente, ini_topic as tematica, ini_space as espacio, cartodb_id, the_geom_webmercator, ini_descri as descr, ini_tef, ini_web, ini_mail, ini_twitter, ini_facebook FROM iniciativas where city like '" + cityquery + "';"
-                sql: "SELECT ini_name as title, lat, lon, ini_addres as address, ini_agent as agente, ini_topic as tematica, ini_space as espacio, cartodb_id, the_geom_webmercator, ini_descri as descr, ini_tef, ini_web, ini_mail, ini_twitte as ini_twitter, ini_facebo as ini_facebook FROM iniciativas_aci_02_2017_n2 where city like '" + cityquery + "';"
+                sql: "SELECT ini_name as title, lat, lon, ini_addres as address, ini_agent as agente, ini_topic as tematica, ini_space as espacio, cartodb_id, the_geom_webmercator, ini_descri as descr, ini_tef, ini_web, ini_mail, ini_twitter, ini_facebook FROM iniciativas_aci_02_2017_n2 where city like '" + cityquery + "';"
                 //sql: 'SELECT espacio_table.act_name as title, espacio_table.ini_id, espacio_table.act_topic as tematica, espacio_table.cartodb_id, espacio_table.act_descri as descr, espacio_table.act_inicio as inicio, espacio_table.act_final as final, espacio_table.ini_web, place_form_table.pla_name as place, place_form_table.pla_tipovia as tipovia, place_form_table.pla_nomvia as nomvia, place_form_table.pla_numportal as portal, place_form_table.map_long as lon, place_form_table.map_lat as lat FROM espacio_table, place_form_table WHERE espacio_table.pla_id = place_form_table.pla_id',
             }],
         }
