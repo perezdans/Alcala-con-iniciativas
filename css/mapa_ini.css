@@ -15,9 +15,9 @@ h1 {
 /*Iconos menu mapa iniciativas */
 
 #hd-menu .hd-menu-place .hd-main:before { content:'\f041'; }
-#hd-menu .hd-menu-agent .hd-main:before { content:'\f0c0'; }
+#hd-menu .hd-menu-agent .hd-main:before { content:'\f110'; }
 #hd-menu .hd-menu-tema .hd-main:before { content:'\f02b'; }
-#hd-menu .hd-menu-space .hd-main:before { content:'\f0e9'; }
+#hd-menu .hd-menu-space .hd-main:before { content:'\f0b2'; }
 #hd-menu .hd-menu-mas .hd-main:before { content:'\f067'; }
 
 #hd-menu-r .hd-menu-act .hd-main-r:before { content:'\f073'; }
@@ -47,7 +47,7 @@ h1 {
   #hd-menu-r .hd-menu-ini { width: 155px; }
   #hd-menu-r .hd-menu-ini a:before { display: inline; font-size: 1.2em; padding-right: 10px; font-family: 'FontAwesome'; }
 
-  #hd-menu-r .hd-menu-act { width: 155px; }
+  #hd-menu-r .hd-menu-act { width: 370px; }
   #hd-menu-r .hd-menu-act :before { display: inline; font-size: 1.2em; padding-right: 10px; font-family: 'FontAwesome'; }
 
 
@@ -65,7 +65,7 @@ h1 {
 
 /*Persiana menú Temática*/
 
-#hd-menu .hd-menu-tema { width: 200px; }
+#hd-menu .hd-menu-tema { width: 180px; }
 #hd-menu .hd-menu-tema a:before { display: inline; font-size: 1.2em; padding-right: 10px; font-family: 'FontAwesome'; }
 #hd-menu .hd-menu-tema .hd-menu-3 { max-height: 480px; overflow: auto; }
 
@@ -80,7 +80,7 @@ h1 {
 
 /*Persiana menú tipo de Espacio*/
 
-#hd-menu .hd-menu-space { width: 250px; }
+#hd-menu .hd-menu-space { width: 210px; }
 #hd-menu .hd-menu-space a:before { display: inline; font-size: 1.2em; padding-right: 10px; font-family: 'FontAwesome'; }
 #hd-menu .hd-menu-space .hd-menu-4 { max-height: 480px; overflow: auto; }
 
@@ -100,7 +100,7 @@ h1 {
 
 /*Desplegable tipo de agente*/
 
-#hd-menu .hd-menu-5 {font-size: 0.9em; width: 155px; background: #fd6ae0; position: absolute; top: -450px; box-sizing: border-box; z-index: -1;
+#hd-menu .hd-menu-5 {font-size: 0.9em; width: 290px; background: #fd6ae0; position: absolute; top: -450px; box-sizing: border-box; z-index: -1;
         -webkit-transition: all 1s; -moz-transition: all 1s;  -o-transition: all 1s; transition: all 1s; }
   #hd-menu .hd-menu-elm:hover .hd-menu-5 { display: block; top: 50px; z-index: -1; background: #f361b0;}
   #hd-menu .hd-menu-5 a { padding-left: 10px; z-index: -1; background: #fd6ae0; }
@@ -109,7 +109,7 @@ h1 {
   #hd-menu .hd-menu-5 a.active, #hd-menu .hd-main.active, #hd-menu .hd-main.active:hover { background: #f361b0; }
 
 /*Persiana menú agente*/
-#hd-menu .hd-menu-agent { width: 155px; }
+#hd-menu .hd-menu-agent { width: 290px; }
 #hd-menu .hd-menu-agent a:before { display: inline; font-size: 1.2em; padding-right: 10px; font-family: 'FontAwesome'; }
 #hd-menu .hd-menu-agent .hd-menu-5 { max-height: 480px; overflow: auto; }
 
@@ -117,10 +117,12 @@ h1 {
 
 /*Colores de tipo de espacio*/
 
-.map-wrap .mk.ic--Centro, #sidebar .mk.ic--Centro:before, #hd-menu .ic--Centro:before, #faq .ic--Centro:before { background: #999999; }
-.map-wrap .mk.ic--Derivas, #sidebar .mk.ic--Derivas:before, #hd-menu .ic--Derivas:before { background: #FFC7BA; }
-.map-wrap .mk.ic--Despensas, #sidebar .mk.ic--Despensas:before, #hd-menu .ic--Despensas:before { background: #DF6D4E; }
-.map-wrap .mk.ic--Escuela, #sidebar .mk.ic--Escuela:before, #hd-menu .ic--Escuela:before { background: #0F9AFB; }
+.map-wrap .mk.ic--mujer, #sidebar .mk.ic--mujer:before, #hd-menu .ic--mujer:before, #faq .ic--mujer:before { background: #8F00FF; }
+.map-wrap .mk.ic--juventud, #sidebar .mk.ic--juventud:before, #hd-menu .ic--juventud:before { background: #FFFF33; }
+.map-wrap .mk.ic--ciudad-en-transicion, #sidebar .mk.ic--ciudad-en-transicion:before, #hd-menu .ic--ciudad-en-transicion:before { background: #76EC32; }
+.map-wrap .mk.ic--cuidados, #sidebar .mk.ic--cuidados:before, #hd-menu .ic--cuidados:before { background: #66FFB2; }
+
+
 .map-wrap .mk.ic--Encuentro, #sidebar .mk.ic--Encuentro:before, #hd-menu .ic--Encuentro:before { background: #6969B0; }
 .map-wrap .mk.ic--Digital, #sidebar .mk.ic--Digital:before, #hd-menu .ic--Digital:before { background: #377E9A; }
 .map-wrap .mk.ic--Huerto, #sidebar .mk.ic--Huerto:before, #hd-menu .ic--Huerto:before { background: #71BF44; }
@@ -133,14 +135,16 @@ h1 {
 
 /*Iconos Leyenda colores tipo de espacio*/
 
-ul.bl--list .circ--Centro{ margin-left:-25px; margin-bottom: -2.1em; border-radius: 50px; border: 2px solid white; width: 20px; height: 20px;
+ul.bl--list .circ--mujer{ margin-left:-25px; margin-bottom: -2.1em; border-radius: 50px; border: 2px solid white; width: 20px; height: 20px;
  -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s; background-color: #999999; box-shadow: 1px 3px rgba(0,0,0,0.1); }
-ul.bl--list .circ--Derivas{ margin-left:-25px; margin-bottom: -2.1em; border-radius: 50px; border: 2px solid white; width: 20px; height: 20px;
+ul.bl--list .circ--juventud{ margin-left:-25px; margin-bottom: -2.1em; border-radius: 50px; border: 2px solid white; width: 20px; height: 20px;
   -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s; background-color: #FFC7BA; box-shadow: 1px 3px rgba(0,0,0,0.1); }
-ul.bl--list .circ--Despensas{ margin-left:-25px; margin-bottom: -2.1em; border-radius: 50px; border: 2px solid white; width: 20px; height: 20px;
+ul.bl--list .circ--ciudad-en-transicion{ margin-left:-25px; margin-bottom: -2.1em; border-radius: 50px; border: 2px solid white; width: 20px; height: 20px;
   -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s; background-color: #DF6D4E; box-shadow: 1px 3px rgba(0,0,0,0.1); }
-ul.bl--list .circ--Escuela{ margin-left:-25px; margin-bottom: -2.1em; border-radius: 50px; border: 2px solid white; width: 20px; height: 20px;
+ul.bl--list .circ--cuidados{ margin-left:-25px; margin-bottom: -2.1em; border-radius: 50px; border: 2px solid white; width: 20px; height: 20px;
   -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s; background-color: #0F9AFB; box-shadow: 1px 3px rgba(0,0,0,0.1); }
+
+
 ul.bl--list .circ--Encuentro{ margin-left:-25px; margin-bottom: -2.1em; border-radius: 50px; border: 2px solid white; width: 20px; height: 20px;
   -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s; background-color: #6969B0; box-shadow: 1px 3px rgba(0,0,0,0.1); }
 ul.bl--list .circ--Digital{ margin-left:-25px; margin-bottom: -2.1em; border-radius: 50px; border: 2px solid white; width: 20px; height: 20px;

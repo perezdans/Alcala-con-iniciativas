@@ -1,11 +1,11 @@
 @font-face {
 
 font-family: 'FontAwesome';
-  src: url('http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.eot');
-  src: url('http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.eot?#iefix&v=3.2.0') format('embedded-opentype'),
-       url('http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.woff') format('woff'),
-       url('http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.ttf') format('truetype'),
-       url('http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.svg') format('svg');
+  src: url('http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.eot');
+  src: url('http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?#iefix&v=3.2.0') format('embedded-opentype'),
+       url('http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff') format('woff'),
+       url('http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf') format('truetype'),
+       url('http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -70,14 +70,17 @@ html[xmlns] .clearfix { display: block; }
 
 /*Iconos temática*/
 
-.ic--arte-y-cultura:before { content:'\f1fc'; }
-.ic--Ciencia:before { content:'\f1fa'; }
-.ic--atencion-y-cuidados:before { content:'\f004'; }
-.ic--ocio:before { content:'\f02d'; }
-.ic--Economía:before { content:'\f0d6'; }
+.ic--artes-y-cultura:before { content:'\f1fc'; }
+.ic--medio-ambiente:before { content:'\f299'; }
+.ic--asociaciones-vecinales:before { content:'\f0c0'; }
 .ic--educacion:before { content:'\f19d'; }
-.ic--deportes:before { content:'\f1e3'; }
-.ic--igualdad-y-derechos:before { content:'\f225'; }
+.ic--ocio-y-deporte:before { content:'\f1cd'; }
+.ic--social:before { content:'\f29a'; }
+.ic--salud:before { content:'\f004'; }
+.ic--emprendimiento:before { content:'\f085'; }
+
+
+
 .ic--Política:before { content:'\f19c'; }
 .ic--integracion-social:before { content:'\f085'; }
 .ic--Producción:before { content:'\f085'; }
