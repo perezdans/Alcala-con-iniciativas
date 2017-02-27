@@ -42,26 +42,21 @@ Para una descripción detallada de las tablas de datos y de sus atributos consul
 * Filtrado de datos según Ciudad, Temática, Tipo de Espacio y Tipo de Agente impulsor de las iniciativas, mediante menús desplegables
 * Consultar información completa de la iniciativa seleccionada
 * Compartir los datos de una actividad seleccionada, mediante redes sociales como Facebook o Twitter
-* Introducir nuevos datos mediante formulario
+* Introducir nuevos datos mediante formulario de Google Docs
 * Consultar leyenda del mapa
 
-## Descripción de los documentos del mapa de iniciativas
+## Descripción de los documentos del mapa de Alcalá con iniciativas
 
-Los documentos correspondientes se encuentran en la carpeta **./iniciativas/**
-
-### ./iniciativas/index.html
+### ./index.html
 Documento HTML con los menús, canvás del mapa y desplegables con información
 
-### ./iniciativas/favicon.png
+### ./favicon.png
 Archivo de imagen en formato PNG correspondiente al icono a representar en el navegador
 
-### ./css/mapa_general.css
-Documento CSS con estilos comunes en los dos mapas
+### ./css/style.css
+Documento CSS con estilos a utilizar en la web y mapa
 
-### ./iniciativas/css/mapa_ini.css
-Documento CSS con estilos del mapa de iniciativas
-
-### ./iniciativas/js/script.js
+### ./js/script.js
 Documento JavaScript para tomar datos de la base de datos y organizarlos para su visualización
 
 ### Dependencias
@@ -70,34 +65,13 @@ Documento JavaScript para tomar datos de la base de datos y organizarlos para su
 * [Overlapping Marker Spiderfier  for Leaflet:](https://github.com/jawj/OverlappingMarkerSpiderfier-Leaflet) Librería JavaScript
 Copyright (c) 2011 - 2012 George MacKerron. El código se encuentra incluido en ./iniciativas/js/script.js
 Released under the [MIT licence](http://opensource.org/licenses/mit-license)
-* [Font Awesome 4.4.0:](http://fortawesome.github.io/Font-Awesome/) Biblioteca de iconos abierta
+* [Font Awesome 4.7.0:](http://fortawesome.github.io/Font-Awesome/) Biblioteca de iconos abierta
 * [Moment.js](http://momentjs.com/) Librería JavaScript para parsear, validar, manipular y representar datos en forma de fecha.
 * [Google Fonts API](https://developers.google.com/fonts/) Servicio para añadir fuentes de texto
 
 # Formulario de entrada de nuevas iniciativas
 
-## Descripción de los documentos del formulario de entrada de nueva iniciativa
-
-### ./iniciativas/formulario/index.php
-Documento con el formulario de entrada de nuevas iniciativas. Mediante scipt en JavaScript, los datos previos se ajustan a la ciudad que se visualiza en el mapa desde el que se ha convocado al formulario añadiendo a la URL: ?city=NombreCiudad. En esta versión alpha v3, se encuentran disponibles dos valores para Nombreciudad: Madrid y MexicoDF
-
-### ./iniciativas/formulario/css/form_styles.css
-Documento CSS con estilos de visualización del formulario
-
-### ./iniciativas/formulario/functions.php
-Documento PHP que se conecta a la base de datos para mostrar en el formulario valores existentes, correspondientes a la ciudad desde donde se ha llamado al formulario
-
-### ./iniciativas/formulario/processFormData.php
-Documento PHP que toma los datos introducidos en el formulario por el usuario y crea entradas nuevas en la base datos
-
-### ./actividades/formulario/cartodb.class.php
-Script para manipular información obtenida de la base de datos alojada en la cuenta del servicio www.cartodb.com asociada al proyecto
-
-### ./actividades/formulario/oauth.php
-Script para la conexión a la base de datos mediante servicio de oauth
-
-### ./actividades/formulario/cartodb.config.php
-Documento PHP con las credenciales para obtener permiso para editar la base de datos de la cuenta del servicio www.cartodb.com asociada al proyecto
+El formulario de entrada de nuevas iniciativas se ha realizado en Google Docs y, por tanto, es ajeno a esta Web.
 
 ### Dependencias
 
@@ -118,8 +92,7 @@ Los datos corresponden a la información facilitada por las iniciativas
 
 Puedes consultar, descargar o utilizar el API que los proporciona desde el servicio de www.cartodb.com:
 
-* [Tabla de las iniciativas recopiladas](https://mappemad.cartodb.com/tables/iniciativas/public)
-* [Tabla de las actividades recopiladas](https://mappemad.cartodb.com/tables/actividades/public)
+* [Tabla de las iniciativas recopiladas](https://alcalaconiniciativas.carto.com/tables/iniciativas_aci_02_2017_n2/public)
 
 ## Descripción de los datos
 
