@@ -44,10 +44,10 @@ if (cadVariables.length>0){
         centro = new L.LatLng(-0.2108, -78.4747);
         cityquery = "Quito";
     };*/
-    $('.hd-menu-mas').find('a').remove();
+    /*$('.hd-menu-mas').find('a').remove();
     $('.hd-menu-mas').append('<a class="hd-main" href="./formulario/?city=' + ciudad +'">Añadir</a>' );
     $('.hd-menu-act').find('a').remove();
-    $('.hd-menu-act').append('<a class="hd-main-r" href="../actividades/?city=' + ciudad +'">Actividades</a>' );
+    $('.hd-menu-act').append('<a class="hd-main-r" href="../actividades/?city=' + ciudad +'">Actividades</a>' );*/
 }
 
 var ui = {
@@ -289,7 +289,7 @@ var data = {
 
             pop.find('h2').html(popdata.title);
             pop.find('.ini-address').html(address);
-            pop.find('h3').html('<p><i class="fa fa-tag"></i>  '+ popdata.tematica + '</br><i class="fa fa-umbrella"></i>  ' + popdata.espacio + '</br><i class="fa fa-users"></i>  ' + popdata.agente + "</p>").removeClass().addClass($(mk._icon).find('div').attr('class'));
+            pop.find('h3').html('<p><i class="fa fa-tag"></i>  '+ popdata.tematica + '</br><i class="fa fa-arrows-alt"></i>  ' + popdata.espacio + '</br><i class="fa fa-spinner"></i>  ' + popdata.agente + "</p>").removeClass().addClass($(mk._icon).find('div').attr('class'));
             //pop.find('.ini-categ').html(popdata.tematica + "</br>" + popdata.espacio + "</br>" + popdata.agente);
             pop.find('.ini-desc').html(popdata.descr);
             pop.find('.ini-contact').html(datoscontacto);
@@ -374,10 +374,10 @@ var map = {
             return false;
         }
 
-        $('.hd-menu-mas').find('a').remove();
+        /*$('.hd-menu-mas').find('a').remove();
         $('.hd-menu-mas').append('<a class="hd-main" href="./formulario/?city=' + ciudad +'">Añadir</a>' );
         $('.hd-menu-act').find('a').remove();
-        $('.hd-menu-act').append('<a class="hd-main-r" href="../actividades/?city=' + ciudad +'">Actividades</a>' );
+        $('.hd-menu-act').append('<a class="hd-main-r" href="../actividades/?city=' + ciudad +'">Actividades</a>' );*/
 
         this.data.map.setView(city, scp);
         mapa.init();
