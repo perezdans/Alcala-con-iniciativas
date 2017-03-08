@@ -244,10 +244,11 @@ var data = {
       }
     },
     drawMarker: function(point) {
-
+        var addClassBorder = '';
+        if (point.agente == 'No') addClassBorder = 'no';
         var icon = L.divIcon({
             iconSize: [40, 40],
-             html: '<div class="mk ic--' + limpiarNombre(point.tematica) + ' ic--' + limpiarNombre(point.espacio) + '">'
+             html: '<div class="mk ic--' + limpiarNombre(point.tematica) + ' ic--' + limpiarNombre(point.espacio) + ' ' + addClassBorder +'">'
         });
     var mark = L.marker([point.lat, point.lon],{ icon: icon, data: point, title: point.title })
       //.addTo(map.data.map)
