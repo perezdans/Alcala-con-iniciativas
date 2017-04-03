@@ -599,7 +599,7 @@ ul.bl--list i {
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 1.9em;
     padding: 10px;
     float: left;
 }
@@ -677,7 +677,7 @@ h1 {
 }
 
 #hd-menu .hd-menu-elm {
-    width: 140px;
+    width: 120px;
     float: left;
     position: relative;
     font-size: 1em;
@@ -721,7 +721,7 @@ h1 {
 }
 
 #hd-menu-r .hd-menu-elm {
-    padding: 0 20px;
+    padding: 0 10px;
     float: left;
     position: relative;
 }
@@ -816,7 +816,7 @@ h1 {
 /*Persiana menú Temática*/
 
 #hd-menu .hd-menu-tema {
-    width: 150px;
+    width: 140px;
 }
 
 #hd-menu .hd-menu-tema a:before {
@@ -878,7 +878,7 @@ h1 {
 /*Persiana menú tipo de Espacio*/
 
 #hd-menu .hd-menu-space {
-    width: 210px;
+    width: 170px;
 }
 
 #hd-menu .hd-menu-space a:before {
@@ -1005,7 +1005,7 @@ h1 {
 /*Persiana menú agente*/
 
 #hd-menu .hd-menu-agent {
-    width: 290px;
+    width: 280px;
 }
 
 #hd-menu .hd-menu-agent a:before {
