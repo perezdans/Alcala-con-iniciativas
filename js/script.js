@@ -1,4 +1,4 @@
-﻿/*CIVICS alpha v3*/
+/*CIVICS alpha v3*/
 /*Mapa de Iniciativas*/
 
 window.onload = function() {
@@ -350,6 +350,7 @@ var map = {
             minZoom: 11
         });
         // add a nice baselayer from Stamen
+        //L.tileLayer('http://a.tiles.mapbox.com/v3/madridcivic.n54hlbcl/{z}/{x}/{y}.png', {
         L.tileLayer('http://a.tiles.mapbox.com/v3/madridcivic.n54hlbcl/{z}/{x}/{y}.png', {
             attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, '+'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, '+'Imagery © <a href="http://mapbox.com">Mapbox</a>'+' Service offered by <a href="http://cartodb.com">CartoDB</a>'
         }).addTo(this.data.map);

@@ -190,20 +190,6 @@ body.sidebarAct {
     box-sizing: border-box;
 }
 
-@media (max-width: 1120px) {
-    #hd-menu .hd-menu-elm {
-        width: 65px;
-    }
-    .hd-main {
-        text-indent: -9999px;
-        overflow: hidden;
-        width: 65px;
-    }
-    .hd-main::before {
-        text-indent: 0;
-    }
-}
-
 
 /*Iconos temática*/
 
@@ -1528,4 +1514,29 @@ ul.bl--list .circ--Trabajo {
 
 .aniadir i {
     font-family: FontAwesome;
+}
+
+
+@media (max-width: 1120px) {
+    #header h1 {
+        font-size: 1em;
+        max-width: 30%;
+        text-align: center;
+    }
+
+    #hd-menu .hd-menu-elm {
+        width: 45px;
+    }
+    .hd-main {
+        text-indent: -9999px;
+        overflow: hidden;
+    }
+    .hd-main::before {
+        text-indent: 0;
+    }
+    #hd-menu-r {
+        display: none;
+    }
+
+    .btn { font-size: 12px; }
 }
