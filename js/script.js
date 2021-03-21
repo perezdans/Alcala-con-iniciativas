@@ -350,9 +350,9 @@ var map = {
             minZoom: 11
         });
         // add a nice baselayer from Stamen
-        //L.tileLayer('http://a.tiles.mapbox.com/v3/madridcivic.n54hlbcl/{z}/{x}/{y}.png', {
-        L.tileLayer('http://a.tiles.mapbox.com/v3/madridcivic.n54hlbcl/{z}/{x}/{y}.png', {
-            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, '+'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, '+'Imagery © <a href="http://mapbox.com">Mapbox</a>'+' Service offered by <a href="http://cartodb.com">CartoDB</a>'
+        //L.tileLayer('https://a.tiles.mapbox.com/v3/madridcivic.n54hlbcl/{z}/{x}/{y}.png', {
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors, '+'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, '+'Imagery © <a href="https://mapbox.com">Mapbox</a>'+' Service offered by <a href="https://cartodb.com">CartoDB</a>'
         }).addTo(this.data.map);
         //L.control.zoom('zoom',{position:'topright'});
         setTimeout(function() {
@@ -464,7 +464,7 @@ var map = {
  OverlappingMarkerSpiderfier
 https://github.com/jawj/OverlappingMarkerSpiderfier-Leaflet
 Copyright (c) 2011 - 2012 George MacKerron
-Released under the MIT licence: http://opensource.org/licenses/mit-license
+Released under the MIT licence: https://opensource.org/licenses/mit-license
 Note: The Leaflet maps API must be included *before* this code
 */
     (function() {
